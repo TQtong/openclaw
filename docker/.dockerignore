@@ -1,0 +1,66 @@
+# Docker build context ignore file
+# Reduces build context size and speeds up builds
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Node modules (will be installed in container)
+node_modules
+**/node_modules
+
+# Build artifacts
+dist
+**/dist
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs
+**/logs
+
+# Environment files (sensitive)
+.env
+.env.*
+!.env.example
+
+# Test files
+*.test.ts
+*.test.js
+*.spec.ts
+*.spec.js
+__tests__
+coverage
+
+# Documentation build
+docs/_build
+
+# Development files
+*.md
+!README.md
+LICENSE
+
+# Docker files (not needed in context)
+docker-compose*.yml
+Dockerfile*
+.dockerignore
+
+# Windows deployment files
+*.bat
+*.ps1
+deploy-windows.bat
+manage-config.bat
+build-exe.bat
+
+# Dist folder
+dist/
